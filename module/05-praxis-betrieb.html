@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Modul 5: Praxis im Betrieb – Bildwerkstatt Sonderwoche</title>
+<meta name="description" content="Modul 5: Social Media im Betrieb, öffentlicher Raum, Guidelines – der Post-Freigabe-Simulator.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true">📷</span>
+      Bildwerkstatt Sonderwoche
+    </a>
+    <a class="home-link" href="../index.html">← Übersicht</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="module-breadcrumb">Modul 5 von 5</div>
+  <div class="progress-wrap">
+    <div id="progress-bar-container"></div>
+  </div>
+
+  <section class="card card--scenario">
+    <span class="tag">Abschluss-Case</span>
+    <h1>Der Firmenanlass</h1>
+    <p>
+      Am grossen Firmenanlass war ein Fotograf im Einsatz. Die Social-Media-
+      Verantwortliche möchte nun mehrere Bilder für Instagram freigeben – eines zeigt
+      auch Kund:innen im Fokus, ein anderes ein KI-generiertes Eventbanner.
+    </p>
+    <p><strong>Wende alles Gelernte an und entscheide für jede Situation im
+      Simulator unten: posten, nicht posten, oder erst Einwilligung einholen?</strong></p>
+  </section>
+
+  <section class="card card--theory">
+    <span class="tag">Theorie</span>
+    <h2>Alles zusammen im Betriebsalltag</h2>
+    <p>
+      Social-Media-Posts vom Arbeitsplatz sollten Kolleg:innen, Kund:innen und
+      interne Dokumente oder Whiteboards nie ohne Erlaubnis zeigen – auch scheinbar
+      nebensächliche Hintergrunddetails (ein Whiteboard mit Strategie, ein Prototyp
+      im Hintergrund) können Geschäftsgeheimnisse verraten. Auch intern geteilte
+      Fotos aus Team-Chat oder Intranet dürfen nicht einfach auf privaten
+      Social-Media-Kanälen weiterverwendet werden – die ursprüngliche Zustimmung galt
+      nur für den internen Rahmen.
+    </p>
+
+    <div class="box box--rule">
+      <h3>Faustregel „if you see it, you may shoot it”</h3>
+      <p>Sie gilt für Gebäude und Objekte auf öffentlichem Grund (Panoramafreiheit) –
+        aber <strong>nicht</strong> automatisch für Personen darauf. Viele Betriebe
+        haben (oder sollten haben) eigene Social-Media-Guidelines für Mitarbeitende:
+        im Zweifel vor dem Posten fragen statt nachher entschuldigen.</p>
+    </div>
+
+    <div class="box box--tip">
+      <h3>Die 3 Fragen vor jedem Posten</h3>
+      <ol>
+        <li>Ist eine erkennbare Person drauf – habe ich ihre Einwilligung?</li>
+        <li>Ist das Bild oder Motiv selbst geschützt (Logo, Kunstwerk, fremdes Foto)?</li>
+        <li>Zeigt das Bild etwas Internes oder Vertrauliches?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="card card--exercise">
+    <span class="tag">Übung</span>
+    <h2>Post-Freigabe-Simulator</h2>
+    <p class="text-muted">Du bist Social-Media-Verantwortliche/r. Entscheide für
+      jede Situation und erhalte sofort eine begründete Rückmeldung.</p>
+
+    <div id="m5-scenarios"></div>
+    <div id="m5-summary" class="exercise-summary"></div>
+
+    <div class="btn-row">
+      <button type="button" id="m5-complete-btn" class="btn" disabled>Modul 5 abschliessen</button>
+    </div>
+  </section>
+
+  <section class="box box--info">
+    <h3>Weiterführende Links</h3>
+    <ul>
+      <li><a href="https://www.edoeb.admin.ch/de/umgang-mit-fotos" target="_blank" rel="noopener">EDÖB – Umgang mit Fotos</a></li>
+      <li><a href="https://www.fedlex.admin.ch/eli/cc/2022/491/de" target="_blank" rel="noopener">Datenschutzgesetz (revDSG, SR 235.1) – Fedlex</a></li>
+    </ul>
+  </section>
+
+  <nav class="module-nav" id="module-nav" aria-label="Modul-Navigation"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="disclaimer">
+      Diese Bildwerkstatt vermittelt eine praxisnahe Einführung in Schweizer Medien-
+      und Bildrecht für Ausbildungszwecke. Sie ersetzt keine Rechtsberatung. Bei
+      konkreten rechtlichen Fragen im Betrieb wende dich an deine
+      Berufsbildnerin/deinen Berufsbildner oder eine Fachperson.
+    </div>
+    <button class="reset-btn" id="reset-btn" type="button">Gesamten Fortschritt zurücksetzen</button>
+  </div>
+</footer>
+
+<script type="module">
+  import { renderProgressBar, renderModuleNav, setupResetButton, enforceUnlock } from "../assets/js/progress.js";
+  import { initModule5 } from "../assets/js/interactions.js";
+
+  if (enforceUnlock("module", 5)) {
+    renderProgressBar(document.getElementById("progress-bar-container"), "Modul 5 von 5");
+    renderModuleNav(document.getElementById("module-nav"), 5);
+    setupResetButton(document.getElementById("reset-btn"));
+    initModule5();
+  }
+</script>
+</body>
+</html>

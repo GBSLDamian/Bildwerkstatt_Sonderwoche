@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abschlusstest – Bildwerkstatt Sonderwoche</title>
+<meta name="description" content="Abschlusstest zur Bildwerkstatt: 8 zufällige Fragen aus allen Modulen.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true">📷</span>
+      Bildwerkstatt Sonderwoche
+    </a>
+    <a class="home-link" href="../index.html">← Übersicht</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="module-breadcrumb">Abschlusstest</div>
+  <div class="progress-wrap">
+    <div id="progress-bar-container"></div>
+  </div>
+
+  <section class="card card--scenario">
+    <span class="tag">Abschlusstest</span>
+    <h1>Zeig, was du gelernt hast</h1>
+    <p>
+      Du bekommst jetzt <strong>8 zufällig ausgewählte Fragen</strong> aus allen
+      Modulen – mit Multiple-Choice-Antwort und einer kurzen Begründung von dir.
+      Ab <strong>6 von 8</strong> richtigen Antworten hast du bestanden und kannst
+      deine Bestätigung erstellen.
+    </p>
+    <p class="text-muted">Achtung: Der Test kann auf diesem Gerät nur einmal
+      vollständig durchlaufen werden.</p>
+  </section>
+
+  <div id="quiz-root"></div>
+
+  <nav class="module-nav" aria-label="Navigation">
+    <a class="btn btn--secondary" href="../module/05-praxis-betrieb.html">← Modul 5</a>
+    <a class="btn btn--secondary" href="../index.html">Übersicht</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="disclaimer">
+      Diese Bildwerkstatt vermittelt eine praxisnahe Einführung in Schweizer Medien-
+      und Bildrecht für Ausbildungszwecke. Sie ersetzt keine Rechtsberatung. Bei
+      konkreten rechtlichen Fragen im Betrieb wende dich an deine
+      Berufsbildnerin/deinen Berufsbildner oder eine Fachperson.
+    </div>
+    <button class="reset-btn no-print" id="reset-btn" type="button">Gesamten Fortschritt zurücksetzen</button>
+  </div>
+</footer>
+
+<script type="module">
+  import { renderProgressBar, setupResetButton, enforceUnlock } from "../assets/js/progress.js";
+  import { initQuiz } from "../assets/js/quiz-engine.js";
+
+  if (enforceUnlock("test")) {
+    renderProgressBar(document.getElementById("progress-bar-container"), "Abschlusstest");
+    setupResetButton(document.getElementById("reset-btn"));
+    initQuiz(document.getElementById("quiz-root"));
+  }
+</script>
+</body>
+</html>

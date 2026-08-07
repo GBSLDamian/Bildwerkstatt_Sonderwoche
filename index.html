@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bildwerkstatt Sonderwoche – Schweizer Medien- und Bildrecht</title>
+<meta name="description" content="Interaktive Bildwerkstatt für KV-Lernende: Urheberrecht, Recht am eigenen Bild, Datenschutz, Lizenzen und KI-Bilder – praxisnah nach Schweizer Recht.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">📷</span>
+      Bildwerkstatt Sonderwoche
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="progress-wrap">
+    <div id="progress-bar-container"></div>
+  </div>
+
+  <section class="card card--scenario">
+    <span class="tag">Einstieg</span>
+    <h1>Leas Sommerfest-Post</h1>
+    <p>
+      Lea ist Kauffrau-Lernende im 2. Lehrjahr. Am Sommerfest ihres Lehrbetriebs macht
+      sie viele Fotos – und postet abends auf Instagram: ein Gruppenfoto mit
+      Kolleg:innen, im Hintergrund das Logo von der Firmenwebsite als Deko-Bild, dazu
+      ein süsses, KI-generiertes Meme mit dem Konterfei ihres Chefs.
+    </p>
+    <p><strong>Was daran könnte rechtlich heikel sein?</strong></p>
+    <p class="text-muted">
+      In den nächsten 5 Modulen findest du es heraus – jeweils mit einem kurzen
+      Praxisfall, knapper Theorie und einer interaktiven Übung. Am Ende wartet ein
+      kurzer Abschlusstest und eine Bestätigung zum Ausdrucken.
+    </p>
+  </section>
+
+  <section class="box box--info">
+    <h3>So funktioniert die Bildwerkstatt</h3>
+    <ul>
+      <li>Dauer total: ca. <strong>90 Minuten</strong> – auch gut im Zug machbar.</li>
+      <li>Die 5 Module bauen aufeinander auf und werden <strong>der Reihe nach</strong> freigeschaltet.</li>
+      <li>Dein Fortschritt wird automatisch auf diesem Gerät gespeichert – du kannst
+        jederzeit unterbrechen und später weitermachen.</li>
+      <li>Nach allen Modulen folgt ein kurzer <strong>Abschlusstest</strong>, danach
+        deine <strong>Bestätigung</strong> zum Zeigen bei der Lehrperson.</li>
+    </ul>
+  </section>
+
+  <h2>Deine Module</h2>
+  <ul class="module-list" id="module-list"></ul>
+
+  <div class="disclaimer">
+    Diese Bildwerkstatt vermittelt eine praxisnahe Einführung in Schweizer Medien- und
+    Bildrecht für Ausbildungszwecke. Sie ersetzt keine Rechtsberatung. Bei konkreten
+    rechtlichen Fragen im Betrieb wende dich an deine Berufsbildnerin/deinen
+    Berufsbildner oder eine Fachperson.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <h4>Weiterführende, offizielle Quellen</h4>
+    <ul>
+      <li><a href="https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/de" target="_blank" rel="noopener">Urheberrechtsgesetz (URG, SR 231.1) – Fedlex</a></li>
+      <li><a href="https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de" target="_blank" rel="noopener">Schweizerisches Zivilgesetzbuch (ZGB, SR 210) – Fedlex</a></li>
+      <li><a href="https://www.fedlex.admin.ch/eli/cc/2022/491/de" target="_blank" rel="noopener">Datenschutzgesetz (revDSG, SR 235.1) – Fedlex</a></li>
+      <li><a href="https://www.edoeb.admin.ch/de/umgang-mit-fotos" target="_blank" rel="noopener">EDÖB – Umgang mit Fotos</a></li>
+      <li><a href="https://www.ige.ch" target="_blank" rel="noopener">Eidgenössisches Institut für Geistiges Eigentum (IGE)</a></li>
+      <li><a href="https://creativecommons.org/licenses/" target="_blank" rel="noopener">Creative Commons – Lizenzübersicht</a></li>
+    </ul>
+    <p>© Bildwerkstatt Sonderwoche · Lernmaterial für die Berufsfachschule, keine Rechtsberatung.</p>
+    <button class="reset-btn" id="reset-btn" type="button">Gesamten Fortschritt zurücksetzen</button>
+  </div>
+</footer>
+
+<script type="module">
+  import { renderProgressBar, renderModuleList, setupResetButton } from "./assets/js/progress.js";
+  renderProgressBar(document.getElementById("progress-bar-container"), "Gesamtfortschritt");
+  renderModuleList(document.getElementById("module-list"));
+  setupResetButton(document.getElementById("reset-btn"));
+</script>
+</body>
+</html>

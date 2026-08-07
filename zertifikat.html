@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bestätigung – Bildwerkstatt Sonderwoche</title>
+<meta name="description" content="Bestätigung über den erfolgreichen Abschluss der Bildwerkstatt Sonderwoche.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header no-print">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">📷</span>
+      Bildwerkstatt Sonderwoche
+    </a>
+    <a class="home-link" href="index.html">← Übersicht</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="module-breadcrumb no-print">Bestätigung / Zertifikat</div>
+
+  <div id="cert-root"></div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="disclaimer">
+      Diese Bildwerkstatt vermittelt eine praxisnahe Einführung in Schweizer Medien-
+      und Bildrecht für Ausbildungszwecke. Sie ersetzt keine Rechtsberatung. Bei
+      konkreten rechtlichen Fragen im Betrieb wende dich an deine
+      Berufsbildnerin/deinen Berufsbildner oder eine Fachperson.
+    </div>
+    <button class="reset-btn no-print" id="reset-btn" type="button">Gesamten Fortschritt zurücksetzen</button>
+  </div>
+</footer>
+
+<script type="module">
+  import { setupResetButton, enforceUnlock } from "./assets/js/progress.js";
+  import { initCertificate } from "./assets/js/certificate.js";
+
+  if (enforceUnlock("cert")) {
+    setupResetButton(document.getElementById("reset-btn"));
+    initCertificate(document.getElementById("cert-root"));
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Modul 2: Recht am eigenen Bild – Bildwerkstatt Sonderwoche</title>
+<meta name="description" content="Modul 2: Recht am eigenen Bild nach Art. 28 ZGB – Einwilligung, Beiwerk-Regel, Gruppenfotos.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true">📷</span>
+      Bildwerkstatt Sonderwoche
+    </a>
+    <a class="home-link" href="../index.html">← Übersicht</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="module-breadcrumb">Modul 2 von 5</div>
+  <div class="progress-wrap">
+    <div id="progress-bar-container"></div>
+  </div>
+
+  <section class="card card--scenario">
+    <span class="tag">Praxisfall</span>
+    <h1>Die Firmenbroschüre</h1>
+    <p>
+      Die Marketing-Abteilung möchte ein Foto vom letzten Teamausflug für die neue
+      Firmenbroschüre verwenden. Die Kolleg:innen auf dem Bild hatten damals nur
+      mündlich zugestimmt, dass das Foto ins Intranet darf.
+    </p>
+    <p><strong>Reicht diese Zustimmung auch für die gedruckte Broschüre?</strong></p>
+  </section>
+
+  <section class="card card--theory">
+    <span class="tag">Theorie</span>
+    <h2>Du bestimmst über dein eigenes Bild</h2>
+    <p>
+      Unabhängig vom Urheberrecht am Foto gilt: Wer widerrechtlich in seiner
+      Persönlichkeit verletzt wird, kann sich gerichtlich wehren (Art. 28 ZGB). Eine
+      Verletzung ist widerrechtlich, <strong>ausser</strong> sie ist durch
+      Einwilligung, ein überwiegendes privates oder öffentliches Interesse oder ein
+      Gesetz gerechtfertigt – wer sich darauf beruft, muss das auch beweisen. Das
+      gilt auch bei Gruppenfotos: Laut EDÖB wiegt der Eingriff weniger schwer, wenn
+      keine Einzelperson aus der Gruppe „heraussticht” und erkennbar im Fokus steht.
+    </p>
+
+    <div class="box box--rule">
+      <h3>Die Beiwerk-Regel des EDÖB</h3>
+      <p>Werden Personen im öffentlichen Raum nur als „Beiwerk” fotografiert (z. B.
+        Passant:innen vor einer Sehenswürdigkeit), reicht es, das Bild auf Verlangen
+        zu löschen bzw. nicht zu veröffentlichen – eine aktive Ansprache vorher ist
+        nicht nötig. Bei gezielten Einzelporträts braucht es dagegen vorher eine
+        informierte Einwilligung.</p>
+    </div>
+
+    <ul>
+      <li>Eine einmal gegebene Einwilligung kann jederzeit widerrufen werden – führt
+        der Widerruf zu einem Schaden (z. B. bereits gedruckte Flyer), kann eine
+        Schadenersatzpflicht entstehen.</li>
+      <li>Kommerzielle Nutzung eines Personenbilds (z. B. Werbung) braucht immer eine
+        ausdrückliche, konkrete Einwilligung – eine allgemeine, pauschale Zustimmung
+        reicht nicht.</li>
+    </ul>
+
+    <div class="box box--tip">
+      <h3>Praxisbeispiel</h3>
+      <p>Die mündliche Zustimmung fürs Intranet deckt die gedruckte Broschüre
+        <strong>nicht</strong> ab. Es braucht eine neue, konkrete Einwilligung –
+        schriftlich empfohlen.</p>
+    </div>
+  </section>
+
+  <section class="card card--exercise">
+    <span class="tag">Übung</span>
+    <h2>Darf ich das Foto posten?</h2>
+    <p class="text-muted">Beantworte die Fragen Schritt für Schritt und erhalte am
+      Ende eine begründete Einschätzung.</p>
+
+    <div id="m2-path" class="tree-path"></div>
+    <div id="m2-tree"></div>
+
+    <div class="btn-row">
+      <button type="button" id="m2-complete-btn" class="btn" disabled>Modul 2 abschliessen</button>
+    </div>
+  </section>
+
+  <section class="box box--info">
+    <h3>Weiterführende Links</h3>
+    <ul>
+      <li><a href="https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de" target="_blank" rel="noopener">Schweizerisches Zivilgesetzbuch (ZGB, SR 210) – Fedlex</a></li>
+      <li><a href="https://www.edoeb.admin.ch/de/umgang-mit-fotos" target="_blank" rel="noopener">EDÖB – Umgang mit Fotos</a></li>
+    </ul>
+  </section>
+
+  <nav class="module-nav" id="module-nav" aria-label="Modul-Navigation"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="disclaimer">
+      Diese Bildwerkstatt vermittelt eine praxisnahe Einführung in Schweizer Medien-
+      und Bildrecht für Ausbildungszwecke. Sie ersetzt keine Rechtsberatung. Bei
+      konkreten rechtlichen Fragen im Betrieb wende dich an deine
+      Berufsbildnerin/deinen Berufsbildner oder eine Fachperson.
+    </div>
+    <button class="reset-btn" id="reset-btn" type="button">Gesamten Fortschritt zurücksetzen</button>
+  </div>
+</footer>
+
+<script type="module">
+  import { renderProgressBar, renderModuleNav, setupResetButton, enforceUnlock } from "../assets/js/progress.js";
+  import { initModule2 } from "../assets/js/interactions.js";
+
+  if (enforceUnlock("module", 2)) {
+    renderProgressBar(document.getElementById("progress-bar-container"), "Modul 2 von 5");
+    renderModuleNav(document.getElementById("module-nav"), 2);
+    setupResetButton(document.getElementById("reset-btn"));
+    initModule2();
+  }
+</script>
+</body>
+</html>

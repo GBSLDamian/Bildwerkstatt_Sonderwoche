@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Modul 3: Datenschutz (revDSG) – Bildwerkstatt Sonderwoche</title>
+<meta name="description" content="Modul 3: Datenschutz nach revDSG – Fotos als Personendaten, Einwilligung, Minderjährige.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true">📷</span>
+      Bildwerkstatt Sonderwoche
+    </a>
+    <a class="home-link" href="../index.html">← Übersicht</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="module-breadcrumb">Modul 3 von 5</div>
+  <div class="progress-wrap">
+    <div id="progress-bar-container"></div>
+  </div>
+
+  <section class="card card--scenario">
+    <span class="tag">Praxisfall</span>
+    <h1>Der LinkedIn-Post</h1>
+    <p>
+      Der Lehrbetrieb möchte auf LinkedIn ein Kurzporträt der neuen Lernenden
+      veröffentlichen – mit Foto, Namen und ein paar Sätzen zur Person.
+    </p>
+    <p><strong>Was muss vorher geklärt werden, bevor das online geht?</strong></p>
+  </section>
+
+  <section class="card card--theory">
+    <span class="tag">Theorie</span>
+    <h2>Fotos sind Personendaten</h2>
+    <p>
+      Seit 1. September 2023 gilt das revidierte Datenschutzgesetz (revDSG, SR
+      235.1). Personendaten sind alle Angaben, die einer Person zugeordnet werden
+      können – ausdrücklich auch Video- und Bildaufnahmen. Firmen müssen bei jeder
+      Beschaffung von Personendaten – auch beim Fotografieren von Mitarbeitenden –
+      vorgängig informieren, wofür die Daten bzw. Bilder verwendet werden.
+      „Privacy by Design/Default” bedeutet: Datenschutz wird von Anfang an
+      mitgedacht, nicht erst nachträglich.
+    </p>
+
+    <div class="box box--rule">
+      <h3>Mitarbeiterfotos richtig einholen</h3>
+      <p>Für Team-Seite, Social Media oder Kundenanlässe braucht es grundsätzlich
+        eine informierte, freiwillige Einwilligung – am besten schriftlich, mit
+        klarer Angabe, <strong>wo</strong> das Bild verwendet wird. Website ≠
+        Broschüre ≠ Social Media: „Ich habe fürs Intranet unterschrieben” deckt
+        nicht automatisch den Flyer am Bahnhof ab.</p>
+    </div>
+
+    <ul>
+      <li>Bei Minderjährigen (z. B. Lernende unter 18) braucht es zusätzlich die
+        Zustimmung der Erziehungsberechtigten.</li>
+      <li>Am besten wird auch festgehalten, wie lange ein Bild online bleibt – z. B.
+        bis zum Austritt aus dem Betrieb.</li>
+    </ul>
+
+    <div class="box box--tip">
+      <h3>Praxisbeispiel</h3>
+      <p>Vor dem LinkedIn-Post braucht es eine konkrete, informierte Einwilligung;
+        bei Minderjährigen zusätzlich die Zustimmung der Eltern; zudem sollte
+        geklärt sein, wie lange das Bild online bleibt.</p>
+    </div>
+  </section>
+
+  <section class="card card--exercise">
+    <span class="tag">Übung</span>
+    <h2>Checkliste vor dem Posten</h2>
+    <p class="text-muted">Kreuze an, was du für dieses Szenario schon geklärt hast,
+      und lass deine Auswahl auswerten.</p>
+
+    <ul class="checklist" id="m3-checklist"></ul>
+
+    <div class="btn-row">
+      <button type="button" id="m3-eval-btn" class="btn btn--secondary">Auswerten</button>
+    </div>
+    <div id="m3-result"></div>
+
+    <div class="btn-row">
+      <button type="button" id="m3-complete-btn" class="btn" disabled>Modul 3 abschliessen</button>
+    </div>
+  </section>
+
+  <section class="box box--info">
+    <h3>Weiterführende Links</h3>
+    <ul>
+      <li><a href="https://www.fedlex.admin.ch/eli/cc/2022/491/de" target="_blank" rel="noopener">Datenschutzgesetz (revDSG, SR 235.1) – Fedlex</a></li>
+      <li><a href="https://www.edoeb.admin.ch/de/umgang-mit-fotos" target="_blank" rel="noopener">EDÖB – Umgang mit Fotos</a></li>
+    </ul>
+  </section>
+
+  <nav class="module-nav" id="module-nav" aria-label="Modul-Navigation"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="disclaimer">
+      Diese Bildwerkstatt vermittelt eine praxisnahe Einführung in Schweizer Medien-
+      und Bildrecht für Ausbildungszwecke. Sie ersetzt keine Rechtsberatung. Bei
+      konkreten rechtlichen Fragen im Betrieb wende dich an deine
+      Berufsbildnerin/deinen Berufsbildner oder eine Fachperson.
+    </div>
+    <button class="reset-btn" id="reset-btn" type="button">Gesamten Fortschritt zurücksetzen</button>
+  </div>
+</footer>
+
+<script type="module">
+  import { renderProgressBar, renderModuleNav, setupResetButton, enforceUnlock } from "../assets/js/progress.js";
+  import { initModule3 } from "../assets/js/interactions.js";
+
+  if (enforceUnlock("module", 3)) {
+    renderProgressBar(document.getElementById("progress-bar-container"), "Modul 3 von 5");
+    renderModuleNav(document.getElementById("module-nav"), 3);
+    setupResetButton(document.getElementById("reset-btn"));
+    initModule3();
+  }
+</script>
+</body>
+</html>

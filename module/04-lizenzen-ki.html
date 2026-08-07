@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Modul 4: Lizenzen, Stockfotos & KI-Bilder – Bildwerkstatt Sonderwoche</title>
+<meta name="description" content="Modul 4: Creative Commons, Stockfotos und die aktuelle Rechtslage bei KI-generierten Bildern.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true">📷</span>
+      Bildwerkstatt Sonderwoche
+    </a>
+    <a class="home-link" href="../index.html">← Übersicht</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="module-breadcrumb">Modul 4 von 5</div>
+  <div class="progress-wrap">
+    <div id="progress-bar-container"></div>
+  </div>
+
+  <section class="card card--scenario">
+    <span class="tag">Praxisfall</span>
+    <h1>Der Comic-Held aus dem KI-Tool</h1>
+    <p>
+      Für einen Social-Media-Post generiert ein Lernender mit einem KI-Tool ein Bild
+      im Stil eines bekannten Comic-Superhelden – als Blickfang für die Story.
+    </p>
+    <p><strong>Darf dieses Bild einfach verwendet werden?</strong></p>
+  </section>
+
+  <section class="card card--theory">
+    <span class="tag">Theorie</span>
+    <h2>Lizenzen erkennen, KI-Bilder richtig einschätzen</h2>
+    <p>
+      <strong>Creative Commons (CC)</strong> ist ein System freier Lizenzen, mit denen
+      Urheber:innen selbst festlegen, was andere mit ihrem Werk tun dürfen: Bei
+      <strong>CC0</strong> wird praktisch auf alle Rechte verzichtet – freie Nutzung,
+      auch kommerziell, ohne Namensnennung. <strong>CC BY</strong> erlaubt freie
+      Nutzung inkl. Bearbeitung und kommerziell, verlangt aber eine Namensnennung.
+      <strong>CC BY-SA</strong> verlangt zusätzlich, dass Bearbeitungen unter derselben
+      Lizenz weitergegeben werden. Weitere Module wie NC (nicht-kommerziell) oder ND
+      (keine Bearbeitung) schränken die Nutzung weiter ein.
+    </p>
+
+    <div class="box box--rule">
+      <h3>Wichtig bei CC-Bildern von Personen</h3>
+      <p>Eine CC-Lizenz regelt nur das Urheberrecht am Bild – <strong>nicht</strong>
+        die Persönlichkeitsrechte einer abgebildeten Person. Für deren Recht am
+        eigenen Bild braucht es trotzdem zusätzlich eine Einwilligung (siehe Modul 2).</p>
+    </div>
+
+    <ul>
+      <li><strong>Stockfoto-Portale</strong> regeln genau, wofür ein gekauftes Bild
+        genutzt werden darf (z. B. nur Social Media, nicht Print) – Lizenzbedingungen
+        immer genau lesen.</li>
+      <li><strong>KI-generierte Bilder (Stand 2026):</strong> Rein KI-generierte
+        Bilder haben nach Schweizer Recht <strong>keinen</strong> Urheberrechtsschutz,
+        weil nur natürliche Personen Urheber:in sein können (Art. 6 URG).</li>
+      <li>Das heisst auch: Ein KI-Bild „gehört” rechtlich niemandem im
+        urheberrechtlichen Sinn – theoretisch könnten es auch andere frei verwenden.</li>
+      <li>Vorsicht ist trotzdem geboten: Ähnelt ein KI-Bild stark einem bestehenden
+        geschützten Werk (z. B. einem bekannten Logo, Comic-Charakter oder Foto), kann
+        das eine Urheberrechtsverletzung darstellen.</li>
+      <li>Seit 2. August 2026 gelten neue EU-Transparenzpflichten für realistisch
+        wirkende KI-Bilder/Videos – relevant auch für Schweizer Betriebe mit
+        EU-Kundschaft. Eine Kennzeichnung von KI-Content ist generell empfehlenswert.</li>
+    </ul>
+
+    <div class="box box--tip">
+      <h3>Praxisbeispiel</h3>
+      <p>Ein KI-Bild im Stil eines bekannten Comic-Superhelden ist heikel: Die
+        Ähnlichkeit zum geschützten Charakter kann eine Urheberrechtsverletzung sein
+        – auch wenn das KI-Bild selbst nicht geschützt ist. Praxistipp: KI-Bilder im
+        Betrieb immer kennzeichnen und im Zweifel Rücksprache mit Vorgesetzten
+        halten.</p>
+    </div>
+  </section>
+
+  <section class="card card--exercise">
+    <span class="tag">Übung</span>
+    <h2>Zuordnungsspiel: Lizenz und Regel</h2>
+    <p class="text-muted">Tippe zuerst auf eine Lizenz-Karte links, dann auf die
+      passende Regel rechts.</p>
+
+    <h3 class="text-muted" style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.03em;">Lizenz / Bildtyp</h3>
+    <div class="memory-board" id="m4-cards"></div>
+
+    <h3 class="text-muted" style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.03em; margin-top:1.2rem;">Nutzungsregel</h3>
+    <div class="memory-board" id="m4-rules"></div>
+
+    <div id="m4-feedback" class="exercise-feedback"></div>
+
+    <div class="btn-row">
+      <button type="button" id="m4-complete-btn" class="btn" disabled>Modul 4 abschliessen</button>
+    </div>
+  </section>
+
+  <section class="box box--info">
+    <h3>Weiterführende Links</h3>
+    <ul>
+      <li><a href="https://creativecommons.org/licenses/" target="_blank" rel="noopener">Creative Commons – Lizenzübersicht</a></li>
+      <li><a href="https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/de" target="_blank" rel="noopener">Urheberrechtsgesetz (URG, SR 231.1) – Fedlex</a></li>
+    </ul>
+  </section>
+
+  <nav class="module-nav" id="module-nav" aria-label="Modul-Navigation"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="disclaimer">
+      Diese Bildwerkstatt vermittelt eine praxisnahe Einführung in Schweizer Medien-
+      und Bildrecht für Ausbildungszwecke. Sie ersetzt keine Rechtsberatung. Bei
+      konkreten rechtlichen Fragen im Betrieb wende dich an deine
+      Berufsbildnerin/deinen Berufsbildner oder eine Fachperson.
+    </div>
+    <button class="reset-btn" id="reset-btn" type="button">Gesamten Fortschritt zurücksetzen</button>
+  </div>
+</footer>
+
+<script type="module">
+  import { renderProgressBar, renderModuleNav, setupResetButton, enforceUnlock } from "../assets/js/progress.js";
+  import { initModule4 } from "../assets/js/interactions.js";
+
+  if (enforceUnlock("module", 4)) {
+    renderProgressBar(document.getElementById("progress-bar-container"), "Modul 4 von 5");
+    renderModuleNav(document.getElementById("module-nav"), 4);
+    setupResetButton(document.getElementById("reset-btn"));
+    initModule4();
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+{
+  "variablen": {
+    "name": ["Lea", "Noah", "Mia", "Luca", "Sara", "Elias", "Aline", "Dario", "Fabienne", "Yannick"],
+    "plattform": ["Instagram", "TikTok", "LinkedIn", "den internen Team-Chat", "die Firmenwebsite"]
+  },
+  "fragen": [
+    {
+      "id": "m1-01",
+      "modul": 1,
+      "szenario": "{{name}} findet online ein tolles Foto einer Berghütte und postet es mit Quellenangabe auf {{plattform}}, ohne den Fotografen zu fragen.",
+      "frage": "Ist das rechtlich in Ordnung?",
+      "optionen": [
+        "Ja, mit Quellenangabe ist das immer erlaubt",
+        "Nein, die Quellenangabe allein reicht nicht – es braucht eine Erlaubnis/Lizenz",
+        "Ja, weil es sich um ein Naturmotiv handelt",
+        "Nein, weil das grundsätzlich verboten ist zu posten"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Fotos sind automatisch urheberrechtlich geschützt. Eine Quellenangabe ersetzt keine Nutzungserlaubnis – ohne Einwilligung oder Lizenz des Fotografen ist die Nutzung nicht erlaubt."
+    },
+    {
+      "id": "m1-02",
+      "modul": 1,
+      "szenario": "{{name}} macht mit dem Handy ein spontanes, unbearbeitetes Schnappschuss-Foto vom Znüni-Tisch im Büro, ganz ohne künstlerischen Anspruch.",
+      "frage": "Ist dieses einfache Handyfoto urheberrechtlich geschützt?",
+      "optionen": [
+        "Nein, nur künstlerisch anspruchsvolle Fotos sind geschützt",
+        "Ja, seit der URG-Revision 2020 sind praktisch alle Fotos geschützt (Lichtbildschutz)",
+        "Nein, Fotos vom Arbeitsplatz sind nie geschützt",
+        "Nur wenn ein ©-Zeichen angebracht wurde"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Seit der URG-Revision 2020 sind auch einfache Fotos ohne individuellen Charakter über den Lichtbildschutz (Art. 2 Abs. 3bis URG) geschützt – ganz ohne Registrierung oder ©-Zeichen."
+    },
+    {
+      "id": "m1-03",
+      "modul": 1,
+      "szenario": "{{name}} fotografiert ein Denkmal auf dem Marktplatz und postet das Bild auf {{plattform}}.",
+      "frage": "Ist das erlaubt?",
+      "optionen": [
+        "Ja, dank der Panoramafreiheit dürfen dauerhaft öffentlich stehende Werke fotografiert und die Fotos verbreitet werden",
+        "Nein, Denkmäler sind grundsätzlich tabu für Fotos",
+        "Nur mit schriftlicher Erlaubnis der Gemeinde",
+        "Ja, aber nur wenn kein Mensch auf dem Foto zu sehen ist"
+      ],
+      "loesung": 0,
+      "musterbegruendung": "Die Panoramafreiheit (Art. 27 URG) erlaubt es, Werke, die dauerhaft an öffentlich zugänglichen Orten stehen, zu fotografieren und die Fotos zu verbreiten – zweidimensional und nicht zum gleichen Zweck wie das Original."
+    },
+    {
+      "id": "m1-04",
+      "modul": 1,
+      "szenario": "{{name}} fotografiert im Inneren der Bahnhofshalle und möchte das Bild für eine Werbekampagne der Firma nutzen.",
+      "frage": "Deckt die Panoramafreiheit diese Nutzung ab?",
+      "optionen": [
+        "Ja, Bahnhöfe sind immer öffentlicher Grund",
+        "Nein, Innenräume gelten in der Regel nicht als „allgemein zugänglicher Grund” im Sinn der Panoramafreiheit – eine Erlaubnis ist meist nötig",
+        "Ja, solange keine Personen zu sehen sind",
+        "Nein, weil Fotografieren in Bahnhöfen generell verboten ist"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Innenräume wie eine Bahnhofshalle gelten in der Regel nicht als allgemein zugänglicher Grund im Sinn der Panoramafreiheit. Für eine kommerzielle Nutzung braucht es meist die Erlaubnis der Betreiberin."
+    },
+    {
+      "id": "m2-01",
+      "modul": 2,
+      "szenario": "Am Teamanlass macht {{name}} ein Gruppenfoto mit 20 Leuten im Hintergrund einer belebten Fussgängerzone. Niemand wird gross fokussiert.",
+      "frage": "Braucht {{name}} von allen 20 Personen eine ausdrückliche Einwilligung, bevor das Foto auf der Firmenwebsite erscheint?",
+      "optionen": [
+        "Ja, immer und von jeder einzelnen Person",
+        "Nein, da niemand einzeln im Fokus steht, ist der Eingriff geringer – Widerspruch muss aber respektiert werden",
+        "Nein, Gruppenfotos sind komplett rechtsfrei",
+        "Nur wenn mehr als 50 Personen abgebildet sind"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Bei Gruppenfotos ohne herausstechende Einzelperson ist der Eingriff ins Recht am eigenen Bild geringer. Widerspricht jemand der Veröffentlichung, muss dies aber respektiert werden."
+    },
+    {
+      "id": "m2-02",
+      "modul": 2,
+      "szenario": "{{name}} hatte einer Kollegin die Einwilligung für ein Werbefoto gegeben. Kurz nachdem der Flyer bereits gedruckt wurde, widerruft {{name}} die Einwilligung.",
+      "frage": "Was kann die Folge eines solchen späten Widerrufs sein?",
+      "optionen": [
+        "Ein Widerruf ist rechtlich gar nicht möglich",
+        "Der Widerruf ist jederzeit möglich, kann bei entstandenem Schaden aber eine Schadenersatzpflicht auslösen",
+        "Der Flyer muss sofort weltweit eingestampft werden, sonst passiert nichts",
+        "Der Widerruf gilt erst nach 30 Tagen"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Eine Einwilligung kann jederzeit widerrufen werden. Führt der Widerruf aber zu einem Schaden – etwa bereits gedruckte Flyer – kann eine Schadenersatzpflicht entstehen."
+    },
+    {
+      "id": "m2-03",
+      "modul": 2,
+      "szenario": "Die Marketing-Abteilung möchte ein Foto von {{name}} für eine Werbeanzeige auf {{plattform}} nutzen. {{name}} hatte allgemein zugestimmt, dass „ab und zu mal Fotos gemacht werden dürfen”.",
+      "frage": "Reicht diese allgemeine Zustimmung für die Werbeanzeige?",
+      "optionen": [
+        "Ja, eine allgemeine Zustimmung deckt jede spätere Nutzung ab",
+        "Nein, kommerzielle Nutzung braucht eine ausdrückliche, konkrete Einwilligung",
+        "Ja, solange {{name}} nicht widerspricht",
+        "Nein, Werbung mit Personenbildern ist grundsätzlich verboten"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Kommerzielle Nutzung eines Personenbilds braucht immer eine ausdrückliche, konkrete Einwilligung – eine allgemeine, pauschale Zustimmung reicht nicht."
+    },
+    {
+      "id": "m2-04",
+      "modul": 2,
+      "szenario": "{{name}} fotografiert eine belebte Einkaufsstrasse für einen Blogbeitrag. Im Bild sind zufällig einige Passant:innen zu sehen, die nicht angesprochen wurden.",
+      "frage": "Was gilt laut der Beiwerk-Regel des EDÖB?",
+      "optionen": [
+        "Jede einzelne Person muss vorher aktiv angesprochen und um Erlaubnis gefragt werden",
+        "Da die Personen nur Beiwerk sind, reicht es, das Bild auf Verlangen zu löschen oder nicht zu veröffentlichen",
+        "Passant:innen haben grundsätzlich keine Rechte an ihrem Bild",
+        "Das Foto darf unter keinen Umständen verwendet werden"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Werden Personen im öffentlichen Raum nur als Beiwerk fotografiert, reicht es laut EDÖB, das Bild auf Verlangen zu löschen bzw. nicht zu veröffentlichen – eine aktive Ansprache vorher ist nicht nötig."
+    },
+    {
+      "id": "m3-01",
+      "modul": 3,
+      "szenario": "Der Betrieb von {{name}} speichert Fotos von Mitarbeitenden für die interne Teamseite.",
+      "frage": "Gelten diese Fotos als Personendaten im Sinn des revDSG?",
+      "optionen": [
+        "Nein, nur Name und Adresse gelten als Personendaten",
+        "Ja, Personendaten umfassen ausdrücklich auch Bild- und Videoaufnahmen erkennbarer Personen",
+        "Nein, Fotos fallen unter das Urheberrecht, nicht unter den Datenschutz",
+        "Nur wenn die Fotos veröffentlicht werden"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Personendaten sind alle Angaben, die einer Person zugeordnet werden können – das revDSG nennt ausdrücklich auch Video- und Bildaufnahmen als Beispiel."
+    },
+    {
+      "id": "m3-02",
+      "modul": 3,
+      "szenario": "{{name}}s Lehrbetrieb möchte am nächsten Kundenanlass Fotos der Mitarbeitenden machen.",
+      "frage": "Was muss der Betrieb laut revDSG vorher tun?",
+      "optionen": [
+        "Nichts, Fotografieren am Arbeitsplatz ist immer erlaubt",
+        "Die Mitarbeitenden vorgängig informieren, wofür die Fotos verwendet werden",
+        "Nur die Geschäftsleitung muss informiert werden",
+        "Die Fotos müssen sofort nach dem Anlass gelöscht werden"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Firmen müssen bei jeder Beschaffung von Personendaten – auch beim Fotografieren von Mitarbeitenden – vorgängig informieren, wofür die Daten bzw. Bilder verwendet werden."
+    },
+    {
+      "id": "m3-03",
+      "modul": 3,
+      "szenario": "{{name}} ist erst 17 Jahre alt und im ersten Lehrjahr. Der Betrieb möchte ein Foto von {{name}} auf {{plattform}} veröffentlichen.",
+      "frage": "Was ist bei minderjährigen Lernenden zusätzlich nötig?",
+      "optionen": [
+        "Gar nichts, ab 15 Jahren dürfen Lernende das selbst entscheiden",
+        "Zusätzlich zur Einwilligung von {{name}} braucht es die Zustimmung der Erziehungsberechtigten",
+        "Es braucht nur die Zustimmung der Berufsschule",
+        "Minderjährige dürfen grundsätzlich nie fotografiert werden"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Bei Minderjährigen braucht es zusätzlich zur Einwilligung der Lernenden selbst die Zustimmung der Erziehungsberechtigten."
+    },
+    {
+      "id": "m3-04",
+      "modul": 3,
+      "szenario": "{{name}} hat vor einem Jahr schriftlich zugestimmt, dass ein Foto von ihr/ihm im Intranet erscheinen darf. Jetzt möchte die Marketing-Abteilung dasselbe Foto auch für einen gedruckten Flyer verwenden.",
+      "frage": "Deckt die damalige Einwilligung fürs Intranet auch den Flyer ab?",
+      "optionen": [
+        "Ja, eine einmalige Einwilligung gilt automatisch für alle künftigen Verwendungen",
+        "Nein, jede Verwendungsart (Website, Broschüre, Social Media) braucht eine eigene, konkrete Grundlage",
+        "Ja, solange es sich um denselben Betrieb handelt",
+        "Nein, weil gedruckte Flyer grundsätzlich verboten sind"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "„Ich habe fürs Intranet unterschrieben” deckt nicht automatisch den Flyer oder andere Kanäle ab. Jede konkrete Verwendung braucht eine eigene informierte Einwilligung."
+    },
+    {
+      "id": "m4-01",
+      "modul": 4,
+      "szenario": "{{name}} findet ein Bild, das unter der Lizenz CC BY veröffentlicht wurde, und möchte es kommerziell auf {{plattform}} nutzen.",
+      "frage": "Was muss {{name}} dabei beachten?",
+      "optionen": [
+        "Gar nichts, CC BY erlaubt alles ohne jede Bedingung",
+        "Die Nutzung inkl. Bearbeitung und kommerziell ist erlaubt, aber die Namensnennung ist Pflicht",
+        "CC BY erlaubt nur nicht-kommerzielle Nutzung",
+        "CC BY-Bilder dürfen nicht verändert werden"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "CC BY erlaubt freie Nutzung inklusive Bearbeitung und kommerziellem Einsatz – die Namensnennung der Urheberin/des Urhebers ist aber Pflicht."
+    },
+    {
+      "id": "m4-02",
+      "modul": 4,
+      "szenario": "{{name}} findet ein CC0-lizenziertes Foto, auf dem eine erkennbare Person zu sehen ist, und möchte es für eine Werbeanzeige nutzen.",
+      "frage": "Reicht die CC0-Lizenz allein aus, um das Bild für Werbung zu verwenden?",
+      "optionen": [
+        "Ja, CC0 deckt automatisch auch das Recht am eigenen Bild der abgebildeten Person ab",
+        "Nein, die CC-Lizenz regelt nur das Urheberrecht – für die abgebildete Person braucht es zusätzlich eine Einwilligung",
+        "Ja, weil CC0 alle Rechte weltweit aufhebt",
+        "Nein, CC0-Bilder dürfen generell nicht kommerziell genutzt werden"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Eine CC-Lizenz regelt nur das Urheberrecht am Bild. Für das Recht am eigenen Bild der abgebildeten Person braucht es trotzdem zusätzlich deren Einwilligung."
+    },
+    {
+      "id": "m4-03",
+      "modul": 4,
+      "szenario": "{{name}} generiert mit einem KI-Tool ein völlig neues, eigenständiges Bild für einen Social-Media-Post.",
+      "frage": "Hat dieses rein KI-generierte Bild nach Schweizer Recht einen eigenen Urheberrechtsschutz?",
+      "optionen": [
+        "Ja, wie jedes andere Foto auch",
+        "Nein, weil nur natürliche Personen Urheber:in sein können (Art. 6 URG) – die KI selbst kann nicht Urheberin sein",
+        "Ja, aber nur wenn das Tool kostenpflichtig war",
+        "Nein, KI-Bilder sind in der Schweiz grundsätzlich verboten"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Rein KI-generierte Bilder haben nach Schweizer Recht keinen Urheberrechtsschutz, weil nur natürliche Personen Urheber:in sein können. Die KI selbst kann niemals Urheberin sein."
+    },
+    {
+      "id": "m4-04",
+      "modul": 4,
+      "szenario": "{{name}} lässt ein KI-Bild erstellen, das einem bekannten Comic-Charakter stark ähnelt, und postet es auf {{plattform}}.",
+      "frage": "Ist das unproblematisch, weil das KI-Bild selbst nicht geschützt ist?",
+      "optionen": [
+        "Ja, weil KI-Bilder generell rechtsfrei sind",
+        "Nein, eine starke Ähnlichkeit zu einem bestehenden geschützten Werk kann trotzdem eine Urheberrechtsverletzung darstellen",
+        "Ja, solange man dazuschreibt, dass es KI-generiert ist",
+        "Nein, weil KI-generierte Bilder grundsätzlich verboten sind"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Auch wenn das KI-Bild selbst nicht geschützt ist: Ähnelt es stark einem bestehenden geschützten Werk wie einem bekannten Comic-Charakter, kann das eine Urheberrechtsverletzung darstellen."
+    },
+    {
+      "id": "m5-01",
+      "modul": 5,
+      "szenario": "{{name}} postet ein Foto vom Arbeitsplatz auf {{plattform}}. Im Hintergrund ist zufällig ein Whiteboard mit der neuen Marketingstrategie zu sehen.",
+      "frage": "Ist das problematisch?",
+      "optionen": [
+        "Nein, Hintergrunddetails spielen nie eine Rolle",
+        "Ja, auch scheinbar nebensächliche Hintergrunddetails können Geschäftsgeheimnisse verraten",
+        "Nein, solange das Whiteboard nicht scharf fotografiert wurde",
+        "Ja, aber nur wenn Personen davorstehen"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Auch scheinbar nebensächliche Hintergrunddetails wie ein Whiteboard mit Strategie-Notizen können Geschäftsgeheimnisse verraten und sollten vor dem Posten geprüft werden."
+    },
+    {
+      "id": "m5-02",
+      "modul": 5,
+      "szenario": "Ein Foto wurde bisher nur im internen Team-Chat geteilt. {{name}} möchte dasselbe Foto nun zusätzlich auf dem privaten {{plattform}}-Account posten.",
+      "frage": "Ist das ohne Weiteres erlaubt?",
+      "optionen": [
+        "Ja, wenn ein Foto einmal intern geteilt wurde, darf es überall weiterverwendet werden",
+        "Nein, die ursprüngliche Zustimmung galt nur für den internen Rahmen – für eine private, öffentliche Nutzung braucht es eine neue Einwilligung",
+        "Ja, solange keine Vorgesetzten widersprechen",
+        "Nein, private Social-Media-Accounts sind für Firmenfotos grundsätzlich verboten"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Auch intern geteilte Fotos dürfen nicht einfach auf privaten Social-Media-Kanälen weiterverwendet werden – die ursprüngliche Zustimmung galt nur für den internen Rahmen."
+    },
+    {
+      "id": "m5-03",
+      "modul": 5,
+      "szenario": "{{name}} fotografiert ein Firmengebäude von der Strasse aus. Auf dem Bild sind auch zufällig vorbeigehende Personen zu erkennen.",
+      "frage": "Deckt die Panoramafreiheit für das Gebäude automatisch auch die abgebildeten Personen ab?",
+      "optionen": [
+        "Ja, wenn das Gebäude fotografiert werden darf, gilt das auch für alle Personen darauf",
+        "Nein, die Panoramafreiheit gilt für Gebäude/Objekte, nicht automatisch für Personen darauf",
+        "Ja, weil sich die Personen im öffentlichen Raum befinden",
+        "Nein, weil Firmengebäude generell nicht fotografiert werden dürfen"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Die Faustregel „if you see it, you may shoot it” gilt für Gebäude und Objekte dank Panoramafreiheit – nicht automatisch für Personen, die darauf zu sehen sind."
+    },
+    {
+      "id": "m5-04",
+      "modul": 5,
+      "szenario": "{{name}} ist unsicher, ob ein Foto vom Firmenanlass gepostet werden darf, und erinnert sich an die 3 Fragen vor jedem Posten.",
+      "frage": "Welche der folgenden Fragen gehört NICHT zu dieser Faustregel?",
+      "optionen": [
+        "Ist eine erkennbare Person drauf – habe ich ihre Einwilligung?",
+        "Ist das Bild oder Motiv selbst geschützt (Logo, Kunstwerk, fremdes Foto)?",
+        "Zeigt das Bild etwas Internes oder Vertrauliches?",
+        "Wie viele Likes wird der Post wahrscheinlich bekommen?"
+      ],
+      "loesung": 3,
+      "musterbegruendung": "Die 3 Fragen vor dem Posten betreffen Einwilligung, Schutz des Motivs und vertrauliche Inhalte – die erwartete Anzahl Likes ist rechtlich irrelevant."
+    },
+    {
+      "id": "b-01",
+      "modul": 4,
+      "szenario": "{{name}} nutzt ein Foto mit CC-BY-Lizenz auf {{plattform}}, vergisst aber, die Fotografin zu nennen.",
+      "frage": "Ist das ein Problem?",
+      "optionen": [
+        "Nein, CC BY verlangt keine Namensnennung",
+        "Ja, bei CC BY ist die Namensnennung Pflicht – ohne sie wird gegen die Lizenzbedingungen verstossen",
+        "Nein, solange das Bild kostenlos war",
+        "Ja, aber nur bei kommerzieller Nutzung"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "CC BY erlaubt freie Nutzung inklusive kommerziellem Einsatz, verlangt dafür aber zwingend die Namensnennung der Urheberin/des Urhebers."
+    },
+    {
+      "id": "b-02",
+      "modul": 2,
+      "szenario": "Ein Foto vom Teamanlass wurde bisher nur im Team-Chat geteilt. Eine Mitarbeiterin möchte es nun auch auf ihrem privaten {{plattform}}-Profil posten, ohne die anderen abgebildeten Personen zu fragen.",
+      "frage": "Ist das in Ordnung?",
+      "optionen": [
+        "Ja, intern geteilte Fotos darf jede Person frei weiterverwenden",
+        "Nein, dafür braucht es eine neue, konkrete Einwilligung der abgebildeten Personen",
+        "Ja, solange es sich um Kolleg:innen handelt",
+        "Nein, private Social-Media-Nutzung ist grundsätzlich verboten"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Die ursprüngliche interne Zustimmung deckt eine private, öffentliche Weiterverwendung nicht ab – dafür braucht es eine neue, konkrete Einwilligung der abgebildeten Personen."
+    },
+    {
+      "id": "b-03",
+      "modul": 1,
+      "szenario": "{{name}} fotografiert ein bekanntes Denkmal und verwendet das Foto anschliessend für ein 3D-Modell, das zum gleichen Zweck wie das Original verkauft wird.",
+      "frage": "Ist das durch die Panoramafreiheit gedeckt?",
+      "optionen": [
+        "Ja, die Panoramafreiheit deckt jede Nutzung von Fotos öffentlicher Werke ab",
+        "Nein, die Panoramafreiheit gilt nur für die zweidimensionale Verbreitung – nicht für einen 3D-Nachbau zum gleichen Zweck wie das Original",
+        "Ja, solange das Denkmal älter als 50 Jahre ist",
+        "Nein, weil Denkmäler grundsätzlich nicht fotografiert werden dürfen"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Die Panoramafreiheit (Art. 27 URG) erlaubt nur die zweidimensionale Verbreitung von Fotos – ein 3D-Nachbau oder eine Nutzung zum gleichen Zweck wie das Original ist nicht gedeckt."
+    },
+    {
+      "id": "b-04",
+      "modul": 3,
+      "szenario": "Für eine grosse Werbekampagne möchte {{name}}s Betrieb ein Gruppenfoto vom letzten Kundenanlass verwenden, auf dem einzelne Kund:innen gut erkennbar im Fokus stehen.",
+      "frage": "Was ist hier nötig?",
+      "optionen": [
+        "Nichts, Fotos von Firmenanlässen dürfen immer für Werbung genutzt werden",
+        "Eine ausdrückliche, konkrete Einwilligung der im Fokus stehenden, erkennbaren Personen",
+        "Es reicht, wenn niemand aktiv widerspricht",
+        "Es reicht die allgemeine Einladung zum Anlass als stillschweigende Zustimmung"
+      ],
+      "loesung": 1,
+      "musterbegruendung": "Stehen einzelne Personen erkennbar im Fokus und wird das Bild kommerziell für Werbung genutzt, braucht es eine ausdrückliche, konkrete Einwilligung dieser Personen."
+    }
+  ]
+}
