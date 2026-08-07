@@ -2,7 +2,7 @@
 // Reines Vanilla JS, kein jQuery, kein Framework.
 // Jede initModuleX()-Funktion erwartet die passenden Container-IDs im jeweiligen Modul-HTML.
 
-import { markModuleDone } from "./progress.js";
+import { markModuleDone, MODULE_PASS_PERCENT } from "./progress.js";
 
 /* ==========================================================================
    Modul 1 – Urheberrecht: Drag&Drop-Sortierspiel
@@ -128,64 +128,86 @@ export function initModule1() {
   const completeBtn = document.getElementById("m1-complete-btn");
   if (!pool) return;
 
-  let placedCount = 0;
-  let correctCount = 0;
-  const results = [];
+  function runAttempt() {
+    pool.innerHTML = "";
+    document.querySelectorAll(".dnd-zone__items").forEach((z) => (z.innerHTML = ""));
+    feedback.className = "exercise-feedback";
+    feedback.innerHTML = "";
+    summary.className = "exercise-summary";
+    summary.innerHTML = "";
+    if (completeBtn) completeBtn.disabled = true;
 
-  M1_ITEMS.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = "dnd-card";
-    card.id = "m1-card-" + item.id;
-    card.dataset.locked = "false";
-    card.innerHTML = `
-      <span>${item.text}</span>
-      <span class="dnd-card__buttons">
-        <button type="button" class="dnd-card__btn" data-zone="erlaubt" aria-label="Als erlaubt einordnen">✓ erlaubt</button>
-        <button type="button" class="dnd-card__btn" data-zone="nicht_erlaubt" aria-label="Als nicht erlaubt einordnen">✗ nicht</button>
-        <button type="button" class="dnd-card__btn" data-zone="kommt_drauf_an" aria-label="Als kommt drauf an einordnen">? je nach</button>
-      </span>
-    `;
-    pool.appendChild(card);
+    let placedCount = 0;
+    let correctCount = 0;
 
-    function place(chosenZone) {
-      if (card.dataset.locked === "true") return;
-      card.dataset.locked = "true";
-      const correct = chosenZone === item.zone;
-      if (correct) correctCount++;
-      placedCount++;
-      results.push({ item, chosenZone, correct });
+    M1_ITEMS.forEach((item) => {
+      const card = document.createElement("div");
+      card.className = "dnd-card";
+      card.id = "m1-card-" + item.id;
+      card.dataset.locked = "false";
+      card.innerHTML = `
+        <span>${item.text}</span>
+        <span class="dnd-card__buttons">
+          <button type="button" class="dnd-card__btn" data-zone="erlaubt" aria-label="Als erlaubt einordnen">✓ erlaubt</button>
+          <button type="button" class="dnd-card__btn" data-zone="nicht_erlaubt" aria-label="Als nicht erlaubt einordnen">✗ nicht</button>
+          <button type="button" class="dnd-card__btn" data-zone="kommt_drauf_an" aria-label="Als kommt drauf an einordnen">? je nach</button>
+        </span>
+      `;
+      pool.appendChild(card);
 
-      const targetZone = document.querySelector(`.dnd-zone[data-zone="${chosenZone}"] .dnd-zone__items`);
-      card.classList.remove("is-dragging");
-      card.style.transform = "";
-      card.style.borderColor = correct ? "var(--color-success)" : "var(--color-danger)";
-      card.style.background = correct ? "var(--color-success-bg)" : "var(--color-danger-bg)";
-      card.querySelectorAll("button").forEach((b) => (b.disabled = true));
-      if (targetZone) targetZone.appendChild(card);
+      function place(chosenZone) {
+        if (card.dataset.locked === "true") return;
+        card.dataset.locked = "true";
+        const correct = chosenZone === item.zone;
+        if (correct) correctCount++;
+        placedCount++;
 
-      feedback.className = "exercise-feedback is-visible " + (correct ? "is-correct" : "is-incorrect");
-      feedback.innerHTML = `<strong>${correct ? "Richtig!" : "Nicht ganz."}</strong> Richtige Einordnung: „${M1_ZONE_LABELS[item.zone]}”. ${item.explain}`;
+        const targetZone = document.querySelector(`.dnd-zone[data-zone="${chosenZone}"] .dnd-zone__items`);
+        card.classList.remove("is-dragging");
+        card.style.transform = "";
+        card.style.borderColor = correct ? "var(--color-success)" : "var(--color-danger)";
+        card.style.background = correct ? "var(--color-success-bg)" : "var(--color-danger-bg)";
+        card.querySelectorAll("button").forEach((b) => (b.disabled = true));
+        if (targetZone) targetZone.appendChild(card);
 
-      if (placedCount === M1_ITEMS.length) {
-        summary.className = "exercise-summary is-visible";
-        summary.innerHTML = `<strong>${correctCount} von ${M1_ITEMS.length} richtig eingeordnet.</strong> Du kannst das Modul jetzt abschliessen.`;
-        if (completeBtn) completeBtn.disabled = false;
+        feedback.className = "exercise-feedback is-visible " + (correct ? "is-correct" : "is-incorrect");
+        feedback.innerHTML = `<strong>${correct ? "Richtig!" : "Nicht ganz."}</strong> Richtige Einordnung: „${M1_ZONE_LABELS[item.zone]}”. ${item.explain}`;
+
+        if (placedCount === M1_ITEMS.length) {
+          const percent = Math.round((correctCount / M1_ITEMS.length) * 100);
+          const passed = percent >= MODULE_PASS_PERCENT;
+          summary.className = "exercise-summary is-visible";
+          if (passed) {
+            summary.innerHTML = `<strong>${correctCount} von ${M1_ITEMS.length} richtig (${percent}%).</strong> Damit hast du die nötigen ${MODULE_PASS_PERCENT}% erreicht – du kannst das Modul jetzt abschliessen.`;
+            if (completeBtn) completeBtn.disabled = false;
+          } else {
+            summary.innerHTML = `
+              <strong>${correctCount} von ${M1_ITEMS.length} richtig (${percent}%).</strong>
+              Für den Abschluss sind mindestens ${MODULE_PASS_PERCENT}% nötig. Schau dir die Begründungen nochmals an und versuch es erneut.
+              <div class="btn-row"><button type="button" class="btn btn--secondary" id="m1-retry-btn">Nochmal versuchen</button></div>
+            `;
+            const retryBtn = document.getElementById("m1-retry-btn");
+            if (retryBtn) retryBtn.addEventListener("click", runAttempt);
+          }
+        }
       }
-    }
 
-    card.querySelectorAll(".dnd-card__btn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        place(btn.dataset.zone);
+      card.querySelectorAll(".dnd-card__btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          place(btn.dataset.zone);
+        });
       });
-    });
 
-    makeDraggable(card, place);
-  });
+      makeDraggable(card, place);
+    });
+  }
+
+  runAttempt();
 
   if (completeBtn) {
     completeBtn.addEventListener("click", () => {
-      markModuleDone(1, correctCount + "/" + M1_ITEMS.length);
+      markModuleDone(1, "bestanden (≥" + MODULE_PASS_PERCENT + "%)");
       window.location.href = "../index.html";
     });
   }
@@ -353,26 +375,33 @@ export function initModule3() {
   });
 
   evalBtn.addEventListener("click", () => {
+    const required = M3_ITEMS.filter((i) => i.required);
     let missed = [];
-    M3_ITEMS.filter((i) => i.required).forEach((item) => {
+    required.forEach((item) => {
       const checked = document.getElementById("m3-" + item.id).checked;
       if (!checked) missed.push(item);
     });
+    const correctCount = required.length - missed.length;
+    const percent = Math.round((correctCount / required.length) * 100);
+    const passed = percent >= MODULE_PASS_PERCENT;
 
     let html = "";
     if (missed.length === 0) {
-      html += `<div class="exercise-feedback is-visible is-correct"><strong>Sehr gut!</strong> Du hast an alle notwendigen Punkte gedacht.</div>`;
+      html += `<div class="exercise-feedback is-visible is-correct"><strong>Sehr gut (${percent}%)!</strong> Du hast an alle notwendigen Punkte gedacht.</div>`;
     } else {
-      html += `<div class="exercise-feedback is-visible is-incorrect"><strong>Noch nicht vollständig.</strong> Folgendes wurde vergessen:</div>`;
+      html += `<div class="exercise-feedback is-visible ${passed ? "is-correct" : "is-incorrect"}"><strong>${percent}% erfüllt.</strong> Folgendes wurde (noch) vergessen:</div>`;
       html += '<ul style="margin-top:0.8rem;">';
       missed.forEach((item) => {
         html += `<li><strong>${item.text}</strong><br><span class="text-muted">${item.explain}</span></li>`;
       });
       html += "</ul>";
+      if (!passed) {
+        html += `<p class="text-muted">Für den Abschluss sind mindestens ${MODULE_PASS_PERCENT}% nötig. Passe deine Auswahl an und klicke nochmals auf „Auswerten”.</p>`;
+      }
     }
     result.className = "exercise-summary is-visible";
     result.innerHTML = html;
-    if (completeBtn) completeBtn.disabled = false;
+    if (completeBtn) completeBtn.disabled = !passed;
   });
 
   if (completeBtn) {
@@ -531,48 +560,69 @@ export function initModule5() {
   const completeBtn = document.getElementById("m5-complete-btn");
   if (!container) return;
 
-  let answeredCount = 0;
-  let correctCount = 0;
+  function runAttempt() {
+    container.innerHTML = "";
+    summary.className = "exercise-summary";
+    summary.innerHTML = "";
+    if (completeBtn) completeBtn.disabled = true;
 
-  M5_SCENARIOS.forEach((sc) => {
-    const card = document.createElement("div");
-    card.className = "sim-card";
-    card.innerHTML = `
-      <div class="sim-card__photo">${sc.photo}</div>
-      <div class="sim-card__body">
-        <p>${sc.text}</p>
-        <div class="sim-choices">
-          ${sc.options.map((o) => `<button type="button" class="btn btn--secondary" data-choice="${o}">${o}</button>`).join("")}
+    let answeredCount = 0;
+    let correctCount = 0;
+
+    M5_SCENARIOS.forEach((sc) => {
+      const card = document.createElement("div");
+      card.className = "sim-card";
+      card.innerHTML = `
+        <div class="sim-card__photo">${sc.photo}</div>
+        <div class="sim-card__body">
+          <p>${sc.text}</p>
+          <div class="sim-choices">
+            ${sc.options.map((o) => `<button type="button" class="btn btn--secondary" data-choice="${o}">${o}</button>`).join("")}
+          </div>
+          <div class="exercise-feedback" data-role="feedback"></div>
         </div>
-        <div class="exercise-feedback" data-role="feedback"></div>
-      </div>
-    `;
-    container.appendChild(card);
+      `;
+      container.appendChild(card);
 
-    const buttons = card.querySelectorAll("[data-choice]");
-    const feedback = card.querySelector("[data-role='feedback']");
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        if (btn.disabled) return;
-        buttons.forEach((b) => (b.disabled = true));
-        const correct = btn.dataset.choice === sc.correct;
-        answeredCount++;
-        if (correct) correctCount++;
-        feedback.className = "exercise-feedback is-visible " + (correct ? "is-correct" : "is-incorrect");
-        feedback.innerHTML = `<strong>${correct ? "Richtig!" : "Empfehlung: " + sc.correct}</strong><br>${sc.explain}`;
+      const buttons = card.querySelectorAll("[data-choice]");
+      const feedback = card.querySelector("[data-role='feedback']");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (btn.disabled) return;
+          buttons.forEach((b) => (b.disabled = true));
+          const correct = btn.dataset.choice === sc.correct;
+          answeredCount++;
+          if (correct) correctCount++;
+          feedback.className = "exercise-feedback is-visible " + (correct ? "is-correct" : "is-incorrect");
+          feedback.innerHTML = `<strong>${correct ? "Richtig!" : "Empfehlung: " + sc.correct}</strong><br>${sc.explain}`;
 
-        if (answeredCount === M5_SCENARIOS.length) {
-          summary.className = "exercise-summary is-visible";
-          summary.innerHTML = `<strong>${correctCount} von ${M5_SCENARIOS.length} Situationen richtig eingeschätzt.</strong> Du kannst das Modul jetzt abschliessen.`;
-          if (completeBtn) completeBtn.disabled = false;
-        }
+          if (answeredCount === M5_SCENARIOS.length) {
+            const percent = Math.round((correctCount / M5_SCENARIOS.length) * 100);
+            const passed = percent >= MODULE_PASS_PERCENT;
+            summary.className = "exercise-summary is-visible";
+            if (passed) {
+              summary.innerHTML = `<strong>${correctCount} von ${M5_SCENARIOS.length} Situationen richtig (${percent}%).</strong> Damit hast du die nötigen ${MODULE_PASS_PERCENT}% erreicht – du kannst das Modul jetzt abschliessen.`;
+              if (completeBtn) completeBtn.disabled = false;
+            } else {
+              summary.innerHTML = `
+                <strong>${correctCount} von ${M5_SCENARIOS.length} Situationen richtig (${percent}%).</strong>
+                Für den Abschluss sind mindestens ${MODULE_PASS_PERCENT}% nötig.
+                <div class="btn-row"><button type="button" class="btn btn--secondary" id="m5-retry-btn">Nochmal versuchen</button></div>
+              `;
+              const retryBtn = document.getElementById("m5-retry-btn");
+              if (retryBtn) retryBtn.addEventListener("click", runAttempt);
+            }
+          }
+        });
       });
     });
-  });
+  }
+
+  runAttempt();
 
   if (completeBtn) {
     completeBtn.addEventListener("click", () => {
-      markModuleDone(5, correctCount + "/" + M5_SCENARIOS.length);
+      markModuleDone(5, "bestanden (≥" + MODULE_PASS_PERCENT + "%)");
       window.location.href = "../index.html";
     });
   }

@@ -3,8 +3,8 @@
 
 import { getTestResult, getCertificate, saveCertificate } from "./progress.js";
 
-function generateCode(name, score, total, dateObj) {
-  const raw = `${name}|${score}/${total}|${dateObj.toISOString()}`;
+function generateCode(name, percent, dateObj) {
+  const raw = `${name}|${percent}%|${dateObj.toISOString()}`;
   let hash = 0;
   for (let i = 0; i < raw.length; i++) {
     hash = (hash * 31 + raw.charCodeAt(i)) >>> 0;
@@ -41,8 +41,8 @@ export function initCertificate(rootEl) {
   rootEl.innerHTML = `
     <section class="card">
       <h2>Bestätigung erstellen</h2>
-      <p>Du hast den Abschlusstest mit <strong>${result.score} / ${result.total}</strong>
-        Punkten bestanden. Gib deinen Namen ein, um deine Bestätigung zu erstellen.</p>
+      <p>Du hast den Abschlusstest mit <strong>${result.percent}%</strong>
+        bestanden. Gib deinen Namen ein, um deine Bestätigung zu erstellen.</p>
       <form id="cert-form" novalidate>
         <label for="cert-name">Dein vollständiger Name</label>
         <input type="text" id="cert-name" name="cert-name" required placeholder="Vorname Nachname" autocomplete="name">
@@ -63,7 +63,7 @@ export function initCertificate(rootEl) {
       return;
     }
     const now = new Date();
-    const code = generateCode(name, result.score, result.total, now);
+    const code = generateCode(name, result.percent, now);
     saveCertificate(name, code, now.toISOString());
     renderCertificate(rootEl, name, now.toISOString(), code, result);
   });
@@ -80,7 +80,7 @@ function renderCertificate(rootEl, name, dateISO, code, result) {
       <div class="certificate__meta">
         <div><strong>${datum}</strong>Datum</div>
         <div><strong>${zeit}</strong>Uhrzeit</div>
-        <div><strong>${result.score} / ${result.total}</strong>Ergebnis Abschlusstest</div>
+        <div><strong>${result.percent}%</strong>Ergebnis Abschlusstest</div>
       </div>
       <div class="certificate__code">${code}</div>
       <p class="text-muted" style="margin-top:1rem; font-size:0.82rem;">

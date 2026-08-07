@@ -18,6 +18,7 @@ const KEYS = {
   testCompleted: "bws_test_completed",
   testScore: "bws_test_score",
   testTotal: "bws_test_total",
+  testPercent: "bws_test_percent",
   testAnswers: "bws_test_answers",
   certName: "bws_cert_name",
   certCode: "bws_cert_code",
@@ -76,10 +77,15 @@ export function isTestCompleted() {
   return safeGet(KEYS.testCompleted) === "true";
 }
 
-export function saveTestResult(score, total, answers) {
+// Der Abschlusstest kann beliebig oft wiederholt werden. "testCompleted" markiert
+// nur, dass mindestens einmal ein Versuch abgeschlossen wurde (für die
+// Gesamtfortschrittsanzeige); jeder neue Versuch überschreibt score/percent mit dem
+// aktuellsten Ergebnis.
+export function saveTestResult(score, total, percent, answers) {
   safeSet(KEYS.testCompleted, "true");
   safeSet(KEYS.testScore, String(score));
   safeSet(KEYS.testTotal, String(total));
+  safeSet(KEYS.testPercent, String(percent));
   try {
     safeSet(KEYS.testAnswers, JSON.stringify(answers || []));
   } catch (e) {}
@@ -90,6 +96,7 @@ export function getTestResult() {
     completed: isTestCompleted(),
     score: Number(safeGet(KEYS.testScore) || 0),
     total: Number(safeGet(KEYS.testTotal) || 0),
+    percent: Number(safeGet(KEYS.testPercent) || 0),
     answers: (() => {
       try {
         return JSON.parse(safeGet(KEYS.testAnswers) || "[]");
@@ -100,11 +107,12 @@ export function getTestResult() {
   };
 }
 
-const PASS_THRESHOLD = 6; // von 8
+export const TEST_PASS_PERCENT = 75;
+export const MODULE_PASS_PERCENT = 80;
 
 export function isCertUnlocked() {
   const r = getTestResult();
-  return r.completed && r.score >= PASS_THRESHOLD;
+  return r.completed && r.percent >= TEST_PASS_PERCENT;
 }
 
 export function saveCertificate(name, code, date) {
@@ -141,6 +149,7 @@ export function resetAllProgress() {
   safeRemove(KEYS.testCompleted);
   safeRemove(KEYS.testScore);
   safeRemove(KEYS.testTotal);
+  safeRemove(KEYS.testPercent);
   safeRemove(KEYS.testAnswers);
   safeRemove(KEYS.certName);
   safeRemove(KEYS.certCode);
@@ -208,7 +217,7 @@ export function renderModuleList(container) {
         <span class="module-item__num">T</span>
         <span class="module-item__body">
           <span class="module-item__title">Abschlusstest</span>
-          <span class="module-item__meta">${testDone ? "Abgeschlossen" : testUnlocked ? "Bereit zum Start" : "Erst nach allen 5 Modulen freigeschaltet"}</span>
+          <span class="module-item__meta">${testDone ? "Schon versucht – beliebig wiederholbar" : testUnlocked ? "Bereit zum Start" : "Erst nach allen 5 Modulen freigeschaltet"}</span>
         </span>
         <span class="module-item__status" aria-hidden="true">${testIcon}</span>
       </${testTag}>
@@ -228,7 +237,7 @@ export function renderModuleList(container) {
         <span class="module-item__num">🎓</span>
         <span class="module-item__body">
           <span class="module-item__title">Bestätigung / Zertifikat</span>
-          <span class="module-item__meta">${hasCert ? "Erstellt" : certUnlocked ? "Bereit zum Erstellen" : "Erst nach bestandenem Test (ab 6/8)"}</span>
+          <span class="module-item__meta">${hasCert ? "Erstellt" : certUnlocked ? "Bereit zum Erstellen" : "Erst nach bestandenem Test (ab " + TEST_PASS_PERCENT + "%)"}</span>
         </span>
         <span class="module-item__status" aria-hidden="true">${certIcon}</span>
       </${certTag}>

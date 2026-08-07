@@ -1,7 +1,24 @@
 {
   "variablen": {
-    "name": ["Lea", "Noah", "Mia", "Luca", "Sara", "Elias", "Aline", "Dario", "Fabienne", "Yannick"],
-    "plattform": ["Instagram", "TikTok", "LinkedIn", "den internen Team-Chat", "die Firmenwebsite"]
+    "name": [
+      "Lea",
+      "Noah",
+      "Mia",
+      "Luca",
+      "Sara",
+      "Elias",
+      "Aline",
+      "Dario",
+      "Fabienne",
+      "Yannick"
+    ],
+    "plattform": [
+      "Instagram",
+      "TikTok",
+      "LinkedIn",
+      "den internen Team-Chat",
+      "die Firmenwebsite"
+    ]
   },
   "fragen": [
     {
@@ -16,7 +33,8 @@
         "Nein, weil das grundsätzlich verboten ist zu posten"
       ],
       "loesung": 1,
-      "musterbegruendung": "Fotos sind automatisch urheberrechtlich geschützt. Eine Quellenangabe ersetzt keine Nutzungserlaubnis – ohne Einwilligung oder Lizenz des Fotografen ist die Nutzung nicht erlaubt."
+      "musterbegruendung": "Fotos sind automatisch urheberrechtlich geschützt. Eine Quellenangabe ersetzt keine Nutzungserlaubnis – ohne Einwilligung oder Lizenz des Fotografen ist die Nutzung nicht erlaubt.",
+      "typ": "mc"
     },
     {
       "id": "m1-02",
@@ -30,7 +48,8 @@
         "Nur wenn ein ©-Zeichen angebracht wurde"
       ],
       "loesung": 1,
-      "musterbegruendung": "Seit der URG-Revision 2020 sind auch einfache Fotos ohne individuellen Charakter über den Lichtbildschutz (Art. 2 Abs. 3bis URG) geschützt – ganz ohne Registrierung oder ©-Zeichen."
+      "musterbegruendung": "Seit der URG-Revision 2020 sind auch einfache Fotos ohne individuellen Charakter über den Lichtbildschutz (Art. 2 Abs. 3bis URG) geschützt – ganz ohne Registrierung oder ©-Zeichen.",
+      "typ": "mc"
     },
     {
       "id": "m1-03",
@@ -44,7 +63,8 @@
         "Ja, aber nur wenn kein Mensch auf dem Foto zu sehen ist"
       ],
       "loesung": 0,
-      "musterbegruendung": "Die Panoramafreiheit (Art. 27 URG) erlaubt es, Werke, die dauerhaft an öffentlich zugänglichen Orten stehen, zu fotografieren und die Fotos zu verbreiten – zweidimensional und nicht zum gleichen Zweck wie das Original."
+      "musterbegruendung": "Die Panoramafreiheit (Art. 27 URG) erlaubt es, Werke, die dauerhaft an öffentlich zugänglichen Orten stehen, zu fotografieren und die Fotos zu verbreiten – zweidimensional und nicht zum gleichen Zweck wie das Original.",
+      "typ": "mc"
     },
     {
       "id": "m1-04",
@@ -58,7 +78,8 @@
         "Nein, weil Fotografieren in Bahnhöfen generell verboten ist"
       ],
       "loesung": 1,
-      "musterbegruendung": "Innenräume wie eine Bahnhofshalle gelten in der Regel nicht als allgemein zugänglicher Grund im Sinn der Panoramafreiheit. Für eine kommerzielle Nutzung braucht es meist die Erlaubnis der Betreiberin."
+      "musterbegruendung": "Innenräume wie eine Bahnhofshalle gelten in der Regel nicht als allgemein zugänglicher Grund im Sinn der Panoramafreiheit. Für eine kommerzielle Nutzung braucht es meist die Erlaubnis der Betreiberin.",
+      "typ": "mc"
     },
     {
       "id": "m2-01",
@@ -72,7 +93,8 @@
         "Nur wenn mehr als 50 Personen abgebildet sind"
       ],
       "loesung": 1,
-      "musterbegruendung": "Bei Gruppenfotos ohne herausstechende Einzelperson ist der Eingriff ins Recht am eigenen Bild geringer. Widerspricht jemand der Veröffentlichung, muss dies aber respektiert werden."
+      "musterbegruendung": "Bei Gruppenfotos ohne herausstechende Einzelperson ist der Eingriff ins Recht am eigenen Bild geringer. Widerspricht jemand der Veröffentlichung, muss dies aber respektiert werden.",
+      "typ": "mc"
     },
     {
       "id": "m2-02",
@@ -86,7 +108,8 @@
         "Der Widerruf gilt erst nach 30 Tagen"
       ],
       "loesung": 1,
-      "musterbegruendung": "Eine Einwilligung kann jederzeit widerrufen werden. Führt der Widerruf aber zu einem Schaden – etwa bereits gedruckte Flyer – kann eine Schadenersatzpflicht entstehen."
+      "musterbegruendung": "Eine Einwilligung kann jederzeit widerrufen werden. Führt der Widerruf aber zu einem Schaden – etwa bereits gedruckte Flyer – kann eine Schadenersatzpflicht entstehen.",
+      "typ": "mc"
     },
     {
       "id": "m2-03",
@@ -100,7 +123,8 @@
         "Nein, Werbung mit Personenbildern ist grundsätzlich verboten"
       ],
       "loesung": 1,
-      "musterbegruendung": "Kommerzielle Nutzung eines Personenbilds braucht immer eine ausdrückliche, konkrete Einwilligung – eine allgemeine, pauschale Zustimmung reicht nicht."
+      "musterbegruendung": "Kommerzielle Nutzung eines Personenbilds braucht immer eine ausdrückliche, konkrete Einwilligung – eine allgemeine, pauschale Zustimmung reicht nicht.",
+      "typ": "mc"
     },
     {
       "id": "m2-04",
@@ -114,7 +138,8 @@
         "Das Foto darf unter keinen Umständen verwendet werden"
       ],
       "loesung": 1,
-      "musterbegruendung": "Werden Personen im öffentlichen Raum nur als Beiwerk fotografiert, reicht es laut EDÖB, das Bild auf Verlangen zu löschen bzw. nicht zu veröffentlichen – eine aktive Ansprache vorher ist nicht nötig."
+      "musterbegruendung": "Werden Personen im öffentlichen Raum nur als Beiwerk fotografiert, reicht es laut EDÖB, das Bild auf Verlangen zu löschen bzw. nicht zu veröffentlichen – eine aktive Ansprache vorher ist nicht nötig.",
+      "typ": "mc"
     },
     {
       "id": "m3-01",
@@ -128,7 +153,8 @@
         "Nur wenn die Fotos veröffentlicht werden"
       ],
       "loesung": 1,
-      "musterbegruendung": "Personendaten sind alle Angaben, die einer Person zugeordnet werden können – das revDSG nennt ausdrücklich auch Video- und Bildaufnahmen als Beispiel."
+      "musterbegruendung": "Personendaten sind alle Angaben, die einer Person zugeordnet werden können – das revDSG nennt ausdrücklich auch Video- und Bildaufnahmen als Beispiel.",
+      "typ": "mc"
     },
     {
       "id": "m3-02",
@@ -142,7 +168,8 @@
         "Die Fotos müssen sofort nach dem Anlass gelöscht werden"
       ],
       "loesung": 1,
-      "musterbegruendung": "Firmen müssen bei jeder Beschaffung von Personendaten – auch beim Fotografieren von Mitarbeitenden – vorgängig informieren, wofür die Daten bzw. Bilder verwendet werden."
+      "musterbegruendung": "Firmen müssen bei jeder Beschaffung von Personendaten – auch beim Fotografieren von Mitarbeitenden – vorgängig informieren, wofür die Daten bzw. Bilder verwendet werden.",
+      "typ": "mc"
     },
     {
       "id": "m3-03",
@@ -156,7 +183,8 @@
         "Minderjährige dürfen grundsätzlich nie fotografiert werden"
       ],
       "loesung": 1,
-      "musterbegruendung": "Bei Minderjährigen braucht es zusätzlich zur Einwilligung der Lernenden selbst die Zustimmung der Erziehungsberechtigten."
+      "musterbegruendung": "Bei Minderjährigen braucht es zusätzlich zur Einwilligung der Lernenden selbst die Zustimmung der Erziehungsberechtigten.",
+      "typ": "mc"
     },
     {
       "id": "m3-04",
@@ -170,7 +198,8 @@
         "Nein, weil gedruckte Flyer grundsätzlich verboten sind"
       ],
       "loesung": 1,
-      "musterbegruendung": "„Ich habe fürs Intranet unterschrieben” deckt nicht automatisch den Flyer oder andere Kanäle ab. Jede konkrete Verwendung braucht eine eigene informierte Einwilligung."
+      "musterbegruendung": "„Ich habe fürs Intranet unterschrieben” deckt nicht automatisch den Flyer oder andere Kanäle ab. Jede konkrete Verwendung braucht eine eigene informierte Einwilligung.",
+      "typ": "mc"
     },
     {
       "id": "m4-01",
@@ -184,7 +213,8 @@
         "CC BY-Bilder dürfen nicht verändert werden"
       ],
       "loesung": 1,
-      "musterbegruendung": "CC BY erlaubt freie Nutzung inklusive Bearbeitung und kommerziellem Einsatz – die Namensnennung der Urheberin/des Urhebers ist aber Pflicht."
+      "musterbegruendung": "CC BY erlaubt freie Nutzung inklusive Bearbeitung und kommerziellem Einsatz – die Namensnennung der Urheberin/des Urhebers ist aber Pflicht.",
+      "typ": "mc"
     },
     {
       "id": "m4-02",
@@ -198,7 +228,8 @@
         "Nein, CC0-Bilder dürfen generell nicht kommerziell genutzt werden"
       ],
       "loesung": 1,
-      "musterbegruendung": "Eine CC-Lizenz regelt nur das Urheberrecht am Bild. Für das Recht am eigenen Bild der abgebildeten Person braucht es trotzdem zusätzlich deren Einwilligung."
+      "musterbegruendung": "Eine CC-Lizenz regelt nur das Urheberrecht am Bild. Für das Recht am eigenen Bild der abgebildeten Person braucht es trotzdem zusätzlich deren Einwilligung.",
+      "typ": "mc"
     },
     {
       "id": "m4-03",
@@ -212,7 +243,8 @@
         "Nein, KI-Bilder sind in der Schweiz grundsätzlich verboten"
       ],
       "loesung": 1,
-      "musterbegruendung": "Rein KI-generierte Bilder haben nach Schweizer Recht keinen Urheberrechtsschutz, weil nur natürliche Personen Urheber:in sein können. Die KI selbst kann niemals Urheberin sein."
+      "musterbegruendung": "Rein KI-generierte Bilder haben nach Schweizer Recht keinen Urheberrechtsschutz, weil nur natürliche Personen Urheber:in sein können. Die KI selbst kann niemals Urheberin sein.",
+      "typ": "mc"
     },
     {
       "id": "m4-04",
@@ -226,7 +258,8 @@
         "Nein, weil KI-generierte Bilder grundsätzlich verboten sind"
       ],
       "loesung": 1,
-      "musterbegruendung": "Auch wenn das KI-Bild selbst nicht geschützt ist: Ähnelt es stark einem bestehenden geschützten Werk wie einem bekannten Comic-Charakter, kann das eine Urheberrechtsverletzung darstellen."
+      "musterbegruendung": "Auch wenn das KI-Bild selbst nicht geschützt ist: Ähnelt es stark einem bestehenden geschützten Werk wie einem bekannten Comic-Charakter, kann das eine Urheberrechtsverletzung darstellen.",
+      "typ": "mc"
     },
     {
       "id": "m5-01",
@@ -240,7 +273,8 @@
         "Ja, aber nur wenn Personen davorstehen"
       ],
       "loesung": 1,
-      "musterbegruendung": "Auch scheinbar nebensächliche Hintergrunddetails wie ein Whiteboard mit Strategie-Notizen können Geschäftsgeheimnisse verraten und sollten vor dem Posten geprüft werden."
+      "musterbegruendung": "Auch scheinbar nebensächliche Hintergrunddetails wie ein Whiteboard mit Strategie-Notizen können Geschäftsgeheimnisse verraten und sollten vor dem Posten geprüft werden.",
+      "typ": "mc"
     },
     {
       "id": "m5-02",
@@ -254,7 +288,8 @@
         "Nein, private Social-Media-Accounts sind für Firmenfotos grundsätzlich verboten"
       ],
       "loesung": 1,
-      "musterbegruendung": "Auch intern geteilte Fotos dürfen nicht einfach auf privaten Social-Media-Kanälen weiterverwendet werden – die ursprüngliche Zustimmung galt nur für den internen Rahmen."
+      "musterbegruendung": "Auch intern geteilte Fotos dürfen nicht einfach auf privaten Social-Media-Kanälen weiterverwendet werden – die ursprüngliche Zustimmung galt nur für den internen Rahmen.",
+      "typ": "mc"
     },
     {
       "id": "m5-03",
@@ -268,7 +303,8 @@
         "Nein, weil Firmengebäude generell nicht fotografiert werden dürfen"
       ],
       "loesung": 1,
-      "musterbegruendung": "Die Faustregel „if you see it, you may shoot it” gilt für Gebäude und Objekte dank Panoramafreiheit – nicht automatisch für Personen, die darauf zu sehen sind."
+      "musterbegruendung": "Die Faustregel „if you see it, you may shoot it” gilt für Gebäude und Objekte dank Panoramafreiheit – nicht automatisch für Personen, die darauf zu sehen sind.",
+      "typ": "mc"
     },
     {
       "id": "m5-04",
@@ -282,7 +318,8 @@
         "Wie viele Likes wird der Post wahrscheinlich bekommen?"
       ],
       "loesung": 3,
-      "musterbegruendung": "Die 3 Fragen vor dem Posten betreffen Einwilligung, Schutz des Motivs und vertrauliche Inhalte – die erwartete Anzahl Likes ist rechtlich irrelevant."
+      "musterbegruendung": "Die 3 Fragen vor dem Posten betreffen Einwilligung, Schutz des Motivs und vertrauliche Inhalte – die erwartete Anzahl Likes ist rechtlich irrelevant.",
+      "typ": "mc"
     },
     {
       "id": "b-01",
@@ -296,7 +333,8 @@
         "Ja, aber nur bei kommerzieller Nutzung"
       ],
       "loesung": 1,
-      "musterbegruendung": "CC BY erlaubt freie Nutzung inklusive kommerziellem Einsatz, verlangt dafür aber zwingend die Namensnennung der Urheberin/des Urhebers."
+      "musterbegruendung": "CC BY erlaubt freie Nutzung inklusive kommerziellem Einsatz, verlangt dafür aber zwingend die Namensnennung der Urheberin/des Urhebers.",
+      "typ": "mc"
     },
     {
       "id": "b-02",
@@ -310,7 +348,8 @@
         "Nein, private Social-Media-Nutzung ist grundsätzlich verboten"
       ],
       "loesung": 1,
-      "musterbegruendung": "Die ursprüngliche interne Zustimmung deckt eine private, öffentliche Weiterverwendung nicht ab – dafür braucht es eine neue, konkrete Einwilligung der abgebildeten Personen."
+      "musterbegruendung": "Die ursprüngliche interne Zustimmung deckt eine private, öffentliche Weiterverwendung nicht ab – dafür braucht es eine neue, konkrete Einwilligung der abgebildeten Personen.",
+      "typ": "mc"
     },
     {
       "id": "b-03",
@@ -324,7 +363,8 @@
         "Nein, weil Denkmäler grundsätzlich nicht fotografiert werden dürfen"
       ],
       "loesung": 1,
-      "musterbegruendung": "Die Panoramafreiheit (Art. 27 URG) erlaubt nur die zweidimensionale Verbreitung von Fotos – ein 3D-Nachbau oder eine Nutzung zum gleichen Zweck wie das Original ist nicht gedeckt."
+      "musterbegruendung": "Die Panoramafreiheit (Art. 27 URG) erlaubt nur die zweidimensionale Verbreitung von Fotos – ein 3D-Nachbau oder eine Nutzung zum gleichen Zweck wie das Original ist nicht gedeckt.",
+      "typ": "mc"
     },
     {
       "id": "b-04",
@@ -338,7 +378,227 @@
         "Es reicht die allgemeine Einladung zum Anlass als stillschweigende Zustimmung"
       ],
       "loesung": 1,
-      "musterbegruendung": "Stehen einzelne Personen erkennbar im Fokus und wird das Bild kommerziell für Werbung genutzt, braucht es eine ausdrückliche, konkrete Einwilligung dieser Personen."
+      "musterbegruendung": "Stehen einzelne Personen erkennbar im Fokus und wird das Bild kommerziell für Werbung genutzt, braucht es eine ausdrückliche, konkrete Einwilligung dieser Personen.",
+      "typ": "mc"
+    },
+    {
+      "id": "k-m1-01",
+      "modul": 1,
+      "typ": "kprim",
+      "szenario": "{{name}} überlegt sich, was beim Fotografieren und Teilen von Bildern rechtlich gilt.",
+      "frage": "Welche der folgenden Aussagen zum Urheberrecht an Fotos sind richtig?",
+      "aussagen": [
+        {
+          "text": "Ein Foto ist erst geschützt, wenn ein ©-Zeichen angebracht wurde.",
+          "richtig": false
+        },
+        {
+          "text": "Auch ein spontanes Handyfoto ohne künstlerischen Anspruch ist seit der URG-Revision 2020 geschützt.",
+          "richtig": true
+        },
+        {
+          "text": "Eine Quellenangabe reicht aus, um ein fremdes Foto legal zu verwenden.",
+          "richtig": false
+        },
+        {
+          "text": "Werke an dauerhaft öffentlich zugänglichen Orten dürfen dank der Panoramafreiheit fotografiert und die Fotos verbreitet werden.",
+          "richtig": true
+        }
+      ]
+    },
+    {
+      "id": "k-m2-01",
+      "modul": 2,
+      "typ": "kprim",
+      "szenario": "Am Firmenanlass entstehen zahlreiche Fotos mit Personen.",
+      "frage": "Welche Aussagen zum Recht am eigenen Bild (Art. 28 ZGB) sind richtig?",
+      "aussagen": [
+        {
+          "text": "Eine Persönlichkeitsverletzung ist immer widerrechtlich, egal ob eine Einwilligung vorliegt.",
+          "richtig": false
+        },
+        {
+          "text": "Bei Gruppenfotos ohne fokussierte Einzelperson wiegt der Eingriff weniger schwer.",
+          "richtig": true
+        },
+        {
+          "text": "Eine einmal gegebene Einwilligung kann nie widerrufen werden.",
+          "richtig": false
+        },
+        {
+          "text": "Kommerzielle Nutzung eines Personenbilds braucht eine ausdrückliche, konkrete Einwilligung.",
+          "richtig": true
+        }
+      ]
+    },
+    {
+      "id": "k-m3-01",
+      "modul": 3,
+      "typ": "kprim",
+      "szenario": "{{name}}s Betrieb plant, mehr Fotos von Mitarbeitenden zu veröffentlichen.",
+      "frage": "Welche Aussagen zum Datenschutz (revDSG) sind richtig?",
+      "aussagen": [
+        {
+          "text": "Fotos erkennbarer Personen gelten als Personendaten.",
+          "richtig": true
+        },
+        {
+          "text": "Eine Einwilligung fürs Intranet deckt automatisch auch die Nutzung auf der Website ab.",
+          "richtig": false
+        },
+        {
+          "text": "Bei minderjährigen Lernenden braucht es zusätzlich die Zustimmung der Erziehungsberechtigten.",
+          "richtig": true
+        },
+        {
+          "text": "Der Betrieb muss vor dem Fotografieren nicht informieren, wofür die Bilder verwendet werden.",
+          "richtig": false
+        }
+      ]
+    },
+    {
+      "id": "k-m4-01",
+      "modul": 4,
+      "typ": "kprim",
+      "szenario": "{{name}} vergleicht verschiedene Bildquellen für einen Social-Media-Post auf {{plattform}}.",
+      "frage": "Welche Aussagen zu Lizenzen und KI-Bildern sind richtig?",
+      "aussagen": [
+        {
+          "text": "CC0-Bilder dürfen frei genutzt werden, auch kommerziell, ohne Namensnennung.",
+          "richtig": true
+        },
+        {
+          "text": "Bei CC BY ist die Namensnennung Pflicht.",
+          "richtig": true
+        },
+        {
+          "text": "Ein rein KI-generiertes Bild ist nach Schweizer Recht automatisch urheberrechtlich geschützt.",
+          "richtig": false
+        },
+        {
+          "text": "Ein KI-Bild, das einem bekannten Comic-Charakter stark ähnelt, kann trotzdem eine Urheberrechtsverletzung darstellen.",
+          "richtig": true
+        }
+      ]
+    },
+    {
+      "id": "k-m5-01",
+      "modul": 5,
+      "typ": "kprim",
+      "szenario": "{{name}} überlegt, ein Foto vom Firmenanlass auf {{plattform}} zu posten.",
+      "frage": "Welche Aussagen zur Praxis im Betrieb sind richtig?",
+      "aussagen": [
+        {
+          "text": "Ein im Hintergrund sichtbares Whiteboard mit Strategie-Infos ist rechtlich unbedenklich.",
+          "richtig": false
+        },
+        {
+          "text": "Intern geteilte Fotos dürfen ohne Weiteres auch privat auf Social Media gepostet werden.",
+          "richtig": false
+        },
+        {
+          "text": "Die Panoramafreiheit für Gebäude deckt automatisch auch abgebildete Personen ab.",
+          "richtig": false
+        },
+        {
+          "text": "Im Zweifel gilt: vor dem Posten fragen statt nachher entschuldigen.",
+          "richtig": true
+        }
+      ]
+    },
+    {
+      "id": "k-b-01",
+      "modul": 0,
+      "typ": "kprim",
+      "szenario": "{{name}} fasst zusammen, was in der Bildwerkstatt gelernt wurde.",
+      "frage": "Welche der folgenden allgemeinen Aussagen sind richtig?",
+      "aussagen": [
+        {
+          "text": "Die Schutzdauer für einfache Lichtbilder ohne individuellen Charakter beträgt 50 Jahre ab Herstellung.",
+          "richtig": true
+        },
+        {
+          "text": "CC-Lizenzen regeln automatisch auch das Recht am eigenen Bild abgebildeter Personen.",
+          "richtig": false
+        },
+        {
+          "text": "Innenräume gelten in der Regel nicht als allgemein zugänglicher Ort im Sinn der Panoramafreiheit.",
+          "richtig": true
+        },
+        {
+          "text": "Ein Widerruf einer Einwilligung kann nie zu einer Schadenersatzpflicht führen.",
+          "richtig": false
+        }
+      ]
+    },
+    {
+      "id": "l-m1-01",
+      "modul": 1,
+      "typ": "luecke",
+      "szenario": "Ergänze den Lückentext zum Urheberrecht.",
+      "frage": "Werke, die dauerhaft an einem öffentlich zugänglichen Ort stehen, dürfen dank der sogenannten ___ fotografiert und die Fotos verbreitet werden (Art. 27 URG).",
+      "antworten": [
+        "panoramafreiheit"
+      ]
+    },
+    {
+      "id": "l-m2-01",
+      "modul": 2,
+      "typ": "luecke",
+      "szenario": "Ergänze den Lückentext zum Recht am eigenen Bild.",
+      "frage": "Wer widerrechtlich in seiner Persönlichkeit verletzt wird, kann sich gemäss Art. 28 des Schweizerischen ___ gerichtlich wehren.",
+      "antworten": [
+        "zgb",
+        "zivilgesetzbuches",
+        "zivilgesetzbuch"
+      ]
+    },
+    {
+      "id": "l-m3-01",
+      "modul": 3,
+      "typ": "luecke",
+      "szenario": "Ergänze den Lückentext zum Datenschutz.",
+      "frage": "Das am 1. September 2023 in Kraft getretene Gesetz, das den Umgang mit Personendaten regelt, heisst revidiertes ___ (Abkürzung reicht).",
+      "antworten": [
+        "dsg",
+        "datenschutzgesetz",
+        "revdsg"
+      ]
+    },
+    {
+      "id": "l-m4-01",
+      "modul": 4,
+      "typ": "luecke",
+      "szenario": "Ergänze den Lückentext zu Lizenzen.",
+      "frage": "Eine Lizenz, bei der die Nutzung inklusive Bearbeitung und kommerziellem Einsatz erlaubt ist, aber die Urheberin genannt werden muss, heisst CC ___ (nur die 2 Buchstaben nach CC eingeben).",
+      "antworten": [
+        "by"
+      ]
+    },
+    {
+      "id": "l-m5-01",
+      "modul": 5,
+      "typ": "luecke",
+      "szenario": "Ergänze den Lückentext zur Praxis im Betrieb.",
+      "frage": "Vor jedem Posten sollte man sich fragen: Ist eine erkennbare Person drauf, ist das Motiv geschützt, und zeigt das Bild etwas ___ oder Vertrauliches?",
+      "antworten": [
+        "internes",
+        "internen",
+        "intern"
+      ]
+    },
+    {
+      "id": "l-b-01",
+      "modul": 0,
+      "typ": "luecke",
+      "szenario": "Ergänze den Lückentext zu KI-Bildern.",
+      "frage": "Nur natürliche Personen können nach Art. 6 URG ___ eines Werks sein – eine KI kann das nicht.",
+      "antworten": [
+        "urheberin",
+        "urheber",
+        "urheberin/urheber",
+        "urheber/urheberin"
+      ]
     }
   ]
 }

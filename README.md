@@ -13,9 +13,15 @@ Serveranfragen nötig).
   Praxis im Betrieb – jeweils mit Praxisfall, kompakter Theorie und interaktiver
   Übung. Module werden sequenziell freigeschaltet, Fortschritt wird lokal im Browser
   gespeichert (`localStorage`).
-- **Abschlusstest**: 8 zufällig aus einem Pool von 24 Fragen gezogene,
-  szenario-basierte Fragen mit randomisierten Variablen (verschiedene Namen/
-  Plattformen), damit keine zwei Lernenden exakt denselben Text erhalten.
+- **Abschlusstest**: 12 zufällig aus einem Pool von 36 Fragen gezogene Fragen in
+  drei Formaten (Multiple-Choice mit Begründung, K-Prim mit 4 Teilaussagen,
+  Lückentext), mit randomisierten Szenario-Variablen (verschiedene Namen/
+  Plattformen). Bewertet wird ausschliesslich in Prozent (ab 75% bestanden),
+  richtige Antworten werden nie angezeigt. Der Test kann beliebig oft wiederholt
+  werden, jedes Mal mit neu zusammengestellten Fragen.
+- Die **Modul-Übungen** (1, 3, 5) verlangen mindestens 80% richtige Antworten zum
+  Abschliessen; bei zu wenig Punkten kann die Übung direkt nochmals gestartet
+  werden.
 - **Bestätigung/Zertifikat**: druckbare Bestätigungsseite mit Name, Datum, Score und
   einem einfachen Bearbeitungscode.
 
